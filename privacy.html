@@ -3,57 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>旅費通 TravelBudget - 隱私權政策</title>
+<title>旅費通 TravelBudget - Privacy Policy</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; color: #333; }
   h1 { color: #E8837C; }
-  h2 { color: #555; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+  h2 { color: #555; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-top: 30px; }
   .date { color: #999; font-size: 14px; }
   ul { padding-left: 20px; }
-  a { color: #E8837C; }
+  a { color: #E8837C; text-decoration: none; }
+  
+  /* 語言切換按鈕樣式 */
+  .lang-switcher { position: sticky; top: 0; background: white; padding: 10px 0; border-bottom: 2px solid #f0f0f0; margin-bottom: 20px; display: flex; gap: 10px; }
+  .lang-btn { cursor: pointer; padding: 5px 15px; border: 1px solid #E8837C; background: white; color: #E8837C; border-radius: 20px; font-size: 14px; transition: 0.3s; }
+  .lang-btn.active { background: #E8837C; color: white; }
+  
+  /* 隱藏非選擇的語言 */
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
 </style>
 </head>
 <body>
-<h1>🦉 旅費通 TravelBudget 隱私權政策</h1>
-<p class="date">最後更新日期：2026 年 4 月 11 日</p>
 
-<h2>1. 概述</h2>
-<p>旅費通（TravelBudget）是一款旅遊記帳應用程式。我們重視您的隱私，本政策說明我們如何收集、使用及保護您的資訊。</p>
+<div class="lang-switcher">
+  <button class="lang-btn active" onclick="switchLang('zh')">繁體中文</button>
+  <button class="lang-btn" onclick="switchLang('en')">English</button>
+  <button class="lang-btn" onclick="switchLang('jp')">日本語</button>
+</div>
 
-<h2>2. 資料收集與儲存</h2>
-<p>旅費通採用<strong>離線優先</strong>設計，您的所有資料（旅程、交易、旅伴、錢包、照片）均儲存在您的裝置本地，不會上傳至任何伺服器。</p>
-<ul>
-  <li>旅程與交易紀錄：僅儲存於裝置本地 SQLite 資料庫</li>
-  <li>照片：儲存於裝置本地應用程式目錄</li>
-  <li>使用者偏好設定：儲存於裝置本地 SharedPreferences</li>
-</ul>
+<div id="zh" class="lang-content active">
+  <h1>🦉 旅費通 TravelBudget 隱私權政策</h1>
+  <p class="date">最後更新日期：2026 年 4 月 11 日</p>
+  <h2>1. 概述</h2>
+  <p>旅費通（TravelBudget）是一款旅遊記帳應用程式。我們重視您的隱私，本政策說明我們如何處理您的資訊。</p>
+  <h2>2. 資料收集與儲存</h2>
+  <p>採用<strong>離線優先</strong>設計，您的資料（旅程、交易、照片等）均儲存在您的裝置本地，不會上傳至伺服器。</p>
+  <ul>
+    <li>資料庫與照片：僅儲存於裝置本地。</li>
+    <li>偏好設定：儲存於裝置本地 SharedPreferences。</li>
+  </ul>
+  <h2>3. 第三方服務</h2>
+  <p>使用匯率 API、定位服務、RevenueCat (內購) 及 Google AdMob (廣告)。</p>
+  <h2>4. 聯絡我們</h2>
+  <p>電子郵件：<a href="mailto:idteasonchen@gmail.com">idteasonchen@gmail.com</a></p>
+</div>
 
-<h2>3. 第三方服務</h2>
-<p>旅費通使用以下第三方服務：</p>
-<ul>
-  <li><strong>匯率 API</strong>：取得即時匯率資料時，會向匯率服務提供商發送幣別查詢請求，不包含任何個人資訊</li>
-  <li><strong>GPS 定位服務</strong>：僅在您主動使用定位功能時存取，用於記錄消費地點，定位資料僅儲存於本地</li>
-  <li><strong>RevenueCat</strong>：處理應用程式內購買，RevenueCat 可能收集匿名的購買統計資料</li>
-  <li><strong>Google AdMob</strong>：顯示廣告時，Google 可能收集裝置識別碼及廣告互動資料</li>
-</ul>
+<div id="en" class="lang-content">
+  <h1>🦉 TravelBudget Privacy Policy</h1>
+  <p class="date">Last Updated: April 11, 2026</p>
+  <h2>1. Overview</h2>
+  <p>TravelBudget is a travel expense tracking app. We value your privacy and this policy explains how we handle your information.</p>
+  <h2>2. Data Collection & Storage</h2>
+  <p>We use an <strong>Offline-First</strong> design. All your data (trips, transactions, photos) is stored locally on your device and is NOT uploaded to any servers.</p>
+  <ul>
+    <li>Database & Photos: Stored locally on device.</li>
+    <li>Preferences: Stored via SharedPreferences locally.</li>
+  </ul>
+  <h2>3. Third-party Services</h2>
+  <p>We use Exchange Rate APIs, Location Services, RevenueCat (IAP), and Google AdMob (Ads).</p>
+  <h2>4. Contact Us</h2>
+  <p>Email: <a href="mailto:idteasonchen@gmail.com">idteasonchen@gmail.com</a></p>
+</div>
 
-<h2>4. 權限使用</h2>
-<ul>
-  <li><strong>相機與相簿</strong>：用於拍攝或選取交易相關照片</li>
-  <li><strong>位置</strong>：用於自動記錄消費地點（可選功能）</li>
-  <li><strong>通知</strong>：用於記帳提醒與旅程通知（可在設定中關閉）</li>
-</ul>
+<div id="jp" class="lang-content">
+  <h1>🦉 TravelBudget プライバシーポリシー</h1>
+  <p class="date">最終更新日：2026年4月11日</p>
+  <h2>1. 概要</h2>
+  <p>TravelBudgetは旅行家計簿アプリです。お客様のプライバシーを重視し、情報の取り扱いについて説明します。</p>
+  <h2>2. データの収集と保存</h2>
+  <p><strong>オフライン優先</strong>設計を採用しており、すべてのデータ（旅行記録、写真など）はデバイス内にのみ保存され、サーバーにはアップロードされません。</p>
+  <ul>
+    <li>データベースと写真：デバイス内に保存。</li>
+    <li>設定：デバイス内の SharedPreferences に保存。</li>
+  </ul>
+  <h2>3. サードパーティサービス</h2>
+  <p>為替レートAPI、位置情報サービス、RevenueCat（アプリ内課金）、Google AdMob（広告）を使用しています。</p>
+  <h2>4. お問い合わせ</h2>
+  <p>メール：<a href="mailto:idteasonchen@gmail.com">idteasonchen@gmail.com</a></p>
+</div>
 
-<h2>5. 資料匯出與分享</h2>
-<p>您可以透過應用程式內的匯出功能將資料匯出為 JSON 或 PDF 格式。匯出的檔案由您自行管理，我們不會存取或儲存這些檔案。</p>
+<script>
+  function switchLang(lang) {
+    // 切換內容顯示
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+    
+    // 切換按鈕狀態
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+    
+    // 修改網頁語系屬性
+    document.documentElement.lang = (lang === 'zh' ? 'zh-TW' : lang === 'en' ? 'en' : 'ja');
+  }
+</script>
 
-<h2>6. 兒童隱私</h2>
-<p>旅費通不針對 13 歲以下兒童設計，我們不會故意收集兒童的個人資訊。</p>
-
-<h2>7. 隱私政策變更</h2>
-<p>我們可能會不定期更新本隱私政策。重大變更時，我們會在應用程式內通知您。</p>
-
-<h2>8. 聯絡我們</h2>
-<p>如有任何隱私相關問題，請聯繫：<a href="mailto:idteasonchen@gmail.com">idteasonchen@gmail.com</a></p>
 </body>
 </html>
