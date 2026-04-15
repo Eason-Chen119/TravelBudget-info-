@@ -3,55 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>旅費通 TravelBudget - 服務條款</title>
+<title>旅費通 TravelBudget - Terms of Service</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; color: #333; }
   h1 { color: #E8837C; }
-  h2 { color: #555; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+  h2 { color: #555; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-top: 30px; }
   .date { color: #999; font-size: 14px; }
   ul { padding-left: 20px; }
-  a { color: #E8837C; }
+  a { color: #E8837C; text-decoration: none; }
+  
+  /* 語言切換按鈕樣式 */
+  .lang-switcher { position: sticky; top: 0; background: white; padding: 10px 0; border-bottom: 2px solid #f0f0f0; margin-bottom: 20px; display: flex; gap: 10px; z-index: 1000; }
+  .lang-btn { cursor: pointer; padding: 5px 15px; border: 1px solid #E8837C; background: white; color: #E8837C; border-radius: 20px; font-size: 14px; transition: 0.3s; outline: none; }
+  .lang-btn.active { background: #E8837C; color: white; }
+  
+  /* 隱藏非選擇的語言 */
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
 </style>
 </head>
 <body>
-<h1>🦉 旅費通 TravelBudget 服務條款</h1>
-<p class="date">最後更新日期：2026 年 4 月 11 日</p>
 
-<h2>1. 服務說明</h2>
-<p>旅費通（TravelBudget）是一款旅遊記帳應用程式，提供預算管理、多幣別記帳、分帳計算等功能。</p>
+<div class="lang-switcher">
+  <button class="lang-btn active" onclick="switchLang('zh')">繁體中文</button>
+  <button class="lang-btn" onclick="switchLang('en')">English</button>
+  <button class="lang-btn" onclick="switchLang('jp')">日本語</button>
+</div>
 
-<h2>2. 使用條件</h2>
-<p>使用本應用程式即表示您同意本服務條款。如不同意，請停止使用。</p>
+<div id="zh" class="lang-content active">
+  <h1>🦉 旅費通 TravelBudget 服務條款</h1>
+  <p class="date">最後更新日期：2026 年 4 月 11 日</p>
+  
+  <h2>1. 服務說明</h2>
+  <p>旅費通（TravelBudget）是一款旅遊記帳應用程式，提供預算管理、多幣別記帳、分帳計算等功能。</p>
 
-<h2>3. 應用程式內購買</h2>
-<ul>
-  <li>部分進階功能需透過應用程式內購買解鎖</li>
-  <li>所有購買均為<strong>非消耗性</strong>（一次購買，永久使用）</li>
-  <li>購買透過 Apple App Store 或 Google Play Store 處理</li>
-  <li>退款請依照各平台的退款政策辦理</li>
-  <li>您可以隨時透過「設定 → 恢復購買」恢復先前的購買項目</li>
-</ul>
+  <h2>2. 使用條件</h2>
+  <p>使用本應用程式即表示您同意本服務條款。如不同意，請停止使用。</p>
 
-<h2>4. 廣告</h2>
-<p>免費版本可能包含廣告。您可以透過購買進階功能或觀看獎勵廣告來解鎖特定功能。</p>
+  <h2>3. 應用程式內購買</h2>
+  <ul>
+    <li>部分進階功能需透過內購解鎖。</li>
+    <li>所有購買均為<strong>非消耗性</strong>（一次購買，永久使用）。</li>
+    <li>購買與退款透過 Apple App Store 或 Google Play Store 處理。</li>
+    <li>可隨時透過「恢復購買」找回先前項目。</li>
+  </ul>
 
-<h2>5. 資料責任</h2>
-<ul>
-  <li>您的資料儲存於裝置本地，您有責任定期備份</li>
-  <li>刪除應用程式將永久刪除所有本地資料</li>
-  <li>我們不對資料遺失負責，建議定期使用匯出功能備份</li>
-</ul>
+  <h2>4. 資料責任</h2>
+  <p>資料儲存於裝置本地，刪除應用程式會永久刪除資料。我們不對資料遺失負責，請定期備份。</p>
 
-<h2>6. 匯率資訊</h2>
-<p>應用程式提供的匯率僅供參考，可能與實際銀行匯率有差異。我們不對匯率資訊的準確性負責。</p>
+  <h2>5. 免責聲明</h2>
+  <p>匯率資訊僅供參考。應用程式按「現狀」提供，不對使用產生的損失負責。</p>
 
-<h2>7. 免責聲明</h2>
-<p>本應用程式按「現狀」提供，不提供任何明示或暗示的保證。我們不對因使用本應用程式而產生的任何損失負責。</p>
+  <h2>6. 聯絡我們</h2>
+  <p>電子郵件：<a href="mailto:idteasonchen@gmail.com">idteasonchen@gmail.com</a></p>
+</div>
 
-<h2>8. 條款變更</h2>
-<p>我們保留隨時修改本服務條款的權利。繼續使用本應用程式即表示您接受修改後的條款。</p>
+<div id="en" class="lang-content">
+  <h1>🦉 TravelBudget Terms of Service</h1>
+  <p class="date">Last Updated: April 11, 2026</p>
+  
+  <h2>1. Service Description</h2>
+  <p>TravelBudget is a travel expense tracking app offering budget management, multi-currency tracking, and split-bill calculation.</p>
 
-<h2>9. 聯絡我們</h2>
-<p>如有任何問題，請聯繫：<a href="mailto:feedback@travelbudget.app">feedback@travelbudget.app</a></p>
+  <h2>2. Conditions of Use</h2>
+  <p>By using this app, you agree to these Terms of Service. If you do not agree, please stop using the service.</p>
+
+  <h2>3. In-App Purchases</h2>
+  <ul>
+    <li>Premium features are available via in-app purchases.</li>
+    <li>All purchases are <strong>non-consumable</strong> (one-time purchase, lifetime use).</li>
+    <li>Purchases and refunds are handled via Apple App Store or Google Play Store.</li>
+    <li>Use "Restore Purchase" to recover previous items.</li>
+  </ul>
+
+  <h2>4. Data Responsibility</h2>
+  <p>Data is stored locally. Deleting the app will permanently delete all data. We are not liable for data loss; please backup regularly.</p>
+
+  <h2>5. Disclaimer</h2>
+  <p>Exchange rates are for reference only. The app is provided "as-is," and we are not liable for any losses incurred from its use.</p>
+
+  <h2>6. Contact Us</h2>
+  <p>Email: <a href="mailto:idteasonchen@gmail.com">idteasonchen@gmail.com</a></p>
+</div>
+
+<div id="jp" class="lang-content">
+  <h1>🦉 TravelBudget 利用規約</h1>
+  <p class="date">最終更新日：2026年4月11日</p>
+  
+  <h2>1. サービス内容</h2>
+  <p>TravelBudgetは、予算管理、多通貨対応の家計簿、割り勘計算機能を提供する旅行用アプリです。</p>
+
+  <h2>2. 利用条件</h2>
+  <p>本アプリを利用することで、本利用規約に同意したものとみなされます。同意できない場合は、利用を中止してください。</p>
+
+  <h2>3. アプリ内課金</h2>
+  <ul>
+    <li>一部の機能はアプリ内課金で提供されます。</li>
+    <li>購入は<strong>非消耗型</strong>（一度の購入で永続的に利用可能）です。</li>
+    <li>決済と返金は Apple App Store または Google Play Store を通じて行われます。</li>
+    <li>「購入の復元」から以前の購入状態を戻すことができます。</li>
+  </ul>
+
+  <h2>4. データの責任</h2>
+  <p>データはデバイス内に保存されます。アプリを削除するとデータは完全に消去されます。データの損失について、当方は責任を負いかねます。</p>
+
+  <h2>5. 免責事項</h2>
+  <p>為替情報は参考用です。本アプリは「現状有姿」で提供され、利用により生じたいかなる損害についても責任を負いません。</p>
+
+  <h2>6. お問い合わせ</h2>
+  <p>メール：<a href="mailto:idteasonchen@gmail.com">idteasonchen@gmail.com</a></p>
+</div>
+
+<script>
+  function switchLang(lang) {
+    // 切換內容顯示
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+    
+    // 切換按鈕狀態
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+    
+    // 修改網頁語系屬性
+    document.documentElement.lang = (lang === 'zh' ? 'zh-TW' : lang === 'en' ? 'en' : 'ja');
+  }
+</script>
+
 </body>
 </html>
