@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +11,12 @@
   .date { color: #999; font-size: 14px; }
   ul { padding-left: 20px; }
   a { color: #E8837C; text-decoration: none; }
-  
+
   /* 語言切換按鈕樣式 */
   .lang-switcher { position: sticky; top: 0; background: white; padding: 10px 0; border-bottom: 2px solid #f0f0f0; margin-bottom: 20px; display: flex; gap: 10px; z-index: 1000; }
   .lang-btn { cursor: pointer; padding: 5px 15px; border: 1px solid #E8837C; background: white; color: #E8837C; border-radius: 20px; font-size: 14px; transition: 0.3s; outline: none; }
   .lang-btn.active { background: #E8837C; color: white; }
-  
+
   /* 隱藏非選擇的語言 */
   .lang-content { display: none; }
   .lang-content.active { display: block; }
@@ -25,92 +25,128 @@
 <body>
 
 <div class="lang-switcher">
-  <button class="lang-btn active" onclick="switchLang('zh')">繁體中文</button>
-  <button class="lang-btn" onclick="switchLang('en')">English</button>
+  <button class="lang-btn" onclick="switchLang('zh')">繁體中文</button>
+  <button class="lang-btn active" onclick="switchLang('en')">English</button>
   <button class="lang-btn" onclick="switchLang('jp')">日本語</button>
 </div>
 
-<div id="zh" class="lang-content active">
+<div id="zh" class="lang-content">
   <h1>🦉 旅費通 TravelBudget 服務條款</h1>
-  <p class="date">最後更新日期：2026 年 4 月 11 日</p>
-  
+  <p class="date">最後更新日期：2026 年 10 月 18 日</p>
+
   <h2>1. 服務說明</h2>
-  <p>旅費通（TravelBudget）是一款旅遊記帳應用程式，提供預算管理、多幣別記帳、分帳計算等功能。</p>
+  <p>旅費通（TravelBudget）是一款旅遊記帳應用程式，提供倒扣式預算管理、多幣別記帳、分帳計算，以及 AI 智慧功能（拍照記帳、文字／語音記帳、文字翻譯、拍照翻譯、旅遊助手）。</p>
 
   <h2>2. 使用條件</h2>
   <p>使用本應用程式即表示您同意本服務條款。如不同意，請停止使用。</p>
 
-  <h2>3. 應用程式內購買</h2>
+  <h2>3. AI 功能與點數</h2>
   <ul>
-    <li>部分進階功能需透過內購解鎖。</li>
-    <li>所有購買均為<strong>非消耗性</strong>（一次購買，永久使用）。</li>
-    <li>購買與退款透過 Apple App Store 或 Google Play Store 處理。</li>
-    <li>可隨時透過「恢復購買」找回先前項目。</li>
+    <li>AI 功能採點數制。使用 AI 功能會消耗「AI 點數」。</li>
+    <li>點數可透過免費方式取得（每日簽到、觀看獎勵廣告、分享），或透過購買點數包／訂閱方案取得。</li>
+    <li>使用 AI 功能時，您的照片或文字會傳送至雲端服務（Google Gemini）進行即時處理，處理完即丟棄、不長期儲存。</li>
   </ul>
 
-  <h2>4. 資料責任</h2>
-  <p>資料儲存於裝置本地，刪除應用程式會永久刪除資料。我們不對資料遺失負責，請定期備份。</p>
+  <h2>4. 應用程式內購買與訂閱</h2>
+  <ul>
+    <li><strong>點數包</strong>（消耗型）：一次性購買 AI 點數，使用後即消耗，不可退款。</li>
+    <li><strong>訂閱方案</strong>（自動續訂）：提供 Basic／Pro／Business 等分級方案，給予每月 AI 點數配額或進階功能。</li>
+    <li>訂閱為<strong>自動續訂</strong>：除非在當期結束前至少 24 小時取消，否則將自動續約並扣款。</li>
+    <li>可隨時於裝置的帳號設定（App Store／Google Play）中管理或取消訂閱；取消後於當期結束時生效。</li>
+    <li>價格與方案內容以購買當下 App 內與商店顯示為準。</li>
+    <li>購買與退款透過 Apple App Store 或 Google Play Store 處理，適用其條款。可使用「恢復購買」找回先前的非消耗性項目與訂閱狀態。</li>
+  </ul>
 
-  <h2>5. 免責聲明</h2>
-  <p>匯率資訊僅供參考。應用程式按「現狀」提供，不對使用產生的損失負責。</p>
+  <h2>5. 帳號</h2>
+  <p>本應用程式使用匿名登入（不需註冊個人帳號）。與點數、訂閱相關的帳務資料以匿名識別碼關聯儲存於雲端，用於同步配額與防止重複領取。</p>
 
-  <h2>6. 聯絡我們</h2>
+  <h2>6. 資料責任</h2>
+  <p>核心記帳資料儲存於裝置本地，刪除應用程式會永久刪除本地資料。我們不對資料遺失負責，請定期備份。詳細資料處理方式請參閱隱私權政策。</p>
+
+  <h2>7. 免責聲明</h2>
+  <p>匯率資訊、AI 辨識與翻譯結果僅供參考，可能有誤差，請自行核對。應用程式按「現狀」提供，不對使用產生的損失負責。</p>
+
+  <h2>8. 聯絡我們</h2>
   <p>電子郵件：<a href="mailto:idteasonchen@gmail.com">idteasonchen@gmail.com</a></p>
 </div>
 
-<div id="en" class="lang-content">
+<div id="en" class="lang-content active">
   <h1>🦉 TravelBudget Terms of Service</h1>
-  <p class="date">Last Updated: April 11, 2026</p>
-  
+  <p class="date">Last Updated: October 18, 2026</p>
+
   <h2>1. Service Description</h2>
-  <p>TravelBudget is a travel expense tracking app offering budget management, multi-currency tracking, and split-bill calculation.</p>
+  <p>TravelBudget is a travel expense tracking app offering countdown budgeting, multi-currency tracking, split-bill calculation, and AI features (photo logging, text / voice logging, text translation, photo translation, and a travel assistant).</p>
 
   <h2>2. Conditions of Use</h2>
   <p>By using this app, you agree to these Terms of Service. If you do not agree, please stop using the service.</p>
 
-  <h2>3. In-App Purchases</h2>
+  <h2>3. AI Features and Points</h2>
   <ul>
-    <li>Premium features are available via in-app purchases.</li>
-    <li>All purchases are <strong>non-consumable</strong> (one-time purchase, lifetime use).</li>
-    <li>Purchases and refunds are handled via Apple App Store or Google Play Store.</li>
-    <li>Use "Restore Purchase" to recover previous items.</li>
+    <li>AI features use a points system. Using an AI feature consumes "AI Points."</li>
+    <li>Points can be obtained for free (daily check-ins, rewarded ads, sharing) or by purchasing point packs / subscriptions.</li>
+    <li>When you use an AI feature, your photo or text is sent to a cloud service (Google Gemini) for real-time processing and is discarded afterward, not stored long-term.</li>
   </ul>
 
-  <h2>4. Data Responsibility</h2>
-  <p>Data is stored locally. Deleting the app will permanently delete all data. We are not liable for data loss; please backup regularly.</p>
+  <h2>4. In-App Purchases and Subscriptions</h2>
+  <ul>
+    <li><strong>Point packs</strong> (consumable): a one-time purchase of AI Points, consumed upon use, non-refundable.</li>
+    <li><strong>Subscriptions</strong> (auto-renewable): tiered plans (Basic / Pro / Business) granting a monthly AI Points quota or premium features.</li>
+    <li>Subscriptions <strong>auto-renew</strong>: unless canceled at least 24 hours before the end of the current period, they renew automatically and you will be charged.</li>
+    <li>You can manage or cancel a subscription anytime in your device account settings (App Store / Google Play); cancellation takes effect at the end of the current period.</li>
+    <li>Prices and plan details are as shown in the app and store at the time of purchase.</li>
+    <li>Purchases and refunds are handled via Apple App Store or Google Play Store under their terms. Use "Restore Purchase" to recover previous non-consumable items and subscription status.</li>
+  </ul>
 
-  <h2>5. Disclaimer</h2>
-  <p>Exchange rates are for reference only. The app is provided "as-is," and we are not liable for any losses incurred from its use.</p>
+  <h2>5. Account</h2>
+  <p>The app uses anonymous sign-in (no personal account registration required). Points and subscription records are stored in the cloud linked to an anonymous identifier, used to sync quotas and prevent duplicate claims.</p>
 
-  <h2>6. Contact Us</h2>
+  <h2>6. Data Responsibility</h2>
+  <p>Core bookkeeping data is stored locally on your device; deleting the app permanently deletes local data. We are not liable for data loss; please back up regularly. See the Privacy Policy for details on data handling.</p>
+
+  <h2>7. Disclaimer</h2>
+  <p>Exchange rates, AI recognition, and translation results are for reference only and may contain errors; please verify them yourself. The app is provided "as-is," and we are not liable for any losses incurred from its use.</p>
+
+  <h2>8. Contact Us</h2>
   <p>Email: <a href="mailto:idteasonchen@gmail.com">idteasonchen@gmail.com</a></p>
 </div>
 
 <div id="jp" class="lang-content">
   <h1>🦉 TravelBudget 利用規約</h1>
-  <p class="date">最終更新日：2026年4月11日</p>
-  
+  <p class="date">最終更新日：2026年10月18日</p>
+
   <h2>1. サービス内容</h2>
-  <p>TravelBudgetは、予算管理、多通貨対応の家計簿、割り勘計算機能を提供する旅行用アプリです。</p>
+  <p>TravelBudgetは、逆算式の予算管理、多通貨対応の家計簿、割り勘計算、およびAI機能（写真記帳、テキスト／音声記帳、テキスト翻訳、写真翻訳、旅行アシスタント）を提供する旅行用アプリです。</p>
 
   <h2>2. 利用条件</h2>
   <p>本アプリを利用することで、本利用規約に同意したものとみなされます。同意できない場合は、利用を中止してください。</p>
 
-  <h2>3. アプリ内課金</h2>
+  <h2>3. AI機能とポイント</h2>
   <ul>
-    <li>一部の機能はアプリ内課金で提供されます。</li>
-    <li>購入は<strong>非消耗型</strong>（一度の購入で永続的に利用可能）です。</li>
-    <li>決済と返金は Apple App Store または Google Play Store を通じて行われます。</li>
-    <li>「購入の復元」から以前の購入状態を戻すことができます。</li>
+    <li>AI機能はポイント制です。AI機能の利用時に「AIポイント」を消費します。</li>
+    <li>ポイントは無料で取得（毎日のチェックイン・リワード広告・シェア）、またはポイントパック／サブスクの購入で取得できます。</li>
+    <li>AI機能の利用時、お客様の写真またはテキストはクラウドサービス（Google Gemini）に送信されリアルタイム処理され、処理後に破棄されます。長期保存は行いません。</li>
   </ul>
 
-  <h2>4. データの責任</h2>
-  <p>データはデバイス内に保存されます。アプリを削除するとデータは完全に消去されます。データの損失について、当方は責任を負いかねます。</p>
+  <h2>4. アプリ内課金とサブスクリプション</h2>
+  <ul>
+    <li><strong>ポイントパック</strong>（消耗型）：AIポイントの一回限りの購入。使用すると消費され、返金はできません。</li>
+    <li><strong>サブスクリプション</strong>（自動更新）：Basic／Pro／Business の段階プランで、毎月のAIポイント枠または上位機能を提供します。</li>
+    <li>サブスクは<strong>自動更新</strong>されます。期間終了の24時間前までに解約しない限り、自動的に更新され課金されます。</li>
+    <li>デバイスのアカウント設定（App Store／Google Play）からいつでも管理・解約できます。解約は現在の期間終了時に有効となります。</li>
+    <li>価格およびプラン内容は、購入時にアプリおよびストアに表示されるものに準じます。</li>
+    <li>決済と返金は Apple App Store または Google Play Store を通じて各社の規約に従い行われます。「購入の復元」で以前の非消耗型項目およびサブスク状態を戻せます。</li>
+  </ul>
 
-  <h2>5. 免責事項</h2>
-  <p>為替情報は参考用です。本アプリは「現状有姿」で提供され、利用により生じたいかなる損害についても責任を負いません。</p>
+  <h2>5. アカウント</h2>
+  <p>本アプリは匿名ログインを使用します（個人アカウント登録は不要）。ポイント・サブスク関連のデータは匿名IDに紐づけてクラウドに保存され、枠の同期と重複受取の防止に使用されます。</p>
 
-  <h2>6. お問い合わせ</h2>
+  <h2>6. データの責任</h2>
+  <p>中核の記帳データはデバイス内に保存され、アプリを削除するとローカルデータは完全に消去されます。データの損失について当方は責任を負いかねますので、定期的にバックアップしてください。データの取り扱いの詳細はプライバシーポリシーをご覧ください。</p>
+
+  <h2>7. 免責事項</h2>
+  <p>為替情報、AI認識・翻訳の結果は参考用であり、誤差が含まれる場合があります。ご自身でご確認ください。本アプリは「現状有姿」で提供され、利用により生じたいかなる損害についても責任を負いません。</p>
+
+  <h2>8. お問い合わせ</h2>
   <p>メール：<a href="mailto:idteasonchen@gmail.com">idteasonchen@gmail.com</a></p>
 </div>
 
@@ -119,11 +155,11 @@
     // 切換內容顯示
     document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
     document.getElementById(lang).classList.add('active');
-    
+
     // 切換按鈕狀態
     document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
     event.currentTarget.classList.add('active');
-    
+
     // 修改網頁語系屬性
     document.documentElement.lang = (lang === 'zh' ? 'zh-TW' : lang === 'en' ? 'en' : 'ja');
   }
@@ -131,3 +167,4 @@
 
 </body>
 </html>
+
