@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>旅費通 TravelBudget - Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; color: #333; }
+  h1 { color: #E8837C; }
+  h2 { color: #555; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-top: 30px; }
+  .date { color: #999; font-size: 14px; }
+  ul { padding-left: 20px; }
+  a { color: #E8837C; text-decoration: none; }
+
+  /* 語言切換按鈕樣式 */
+  .lang-switcher { position: sticky; top: 0; background: white; padding: 10px 0; border-bottom: 2px solid #f0f0f0; margin-bottom: 20px; display: flex; gap: 10px; }
+  .lang-btn { cursor: pointer; padding: 5px 15px; border: 1px solid #E8837C; background: white; color: #E8837C; border-radius: 20px; font-size: 14px; transition: 0.3s; }
+  .lang-btn.active { background: #E8837C; color: white; }
+
+  /* 隱藏非選擇的語言 */
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
+</style>
+</head>
+<body>
+
+<div class="lang-switcher">
+  <button class="lang-btn active" onclick="switchLang('en')">English</button>
+  <button class="lang-btn" onclick="switchLang('zh')">繁體中文</button>
+  <button class="lang-btn" onclick="switchLang('jp')">日本語</button>
+</div>
+
+<div id="zh" class="lang-content">
+  <h1>🦉 旅費通 TravelBudget 隱私權政策</h1>
+  <p class="date">最後更新日期：2026 年 10 月 11 日</p>
+
+  <h2>1. 概述</h2>
+  <p>旅費通（TravelBudget）是一款旅遊記帳應用程式。我們重視您的隱私，本政策說明我們如何收集、使用及保護您的資訊。</p>
+
+  <h2>2. 資料儲存原則（離線優先）</h2>
+  <p>旅費通採用<strong>離線優先</strong>設計。您的核心記帳資料均儲存在您的裝置本地，不會上傳至伺服器：</p>
+  <ul>
+    <li>旅程、交易、旅伴、錢包等紀錄：僅儲存於裝置本地 SQLite 資料庫。</li>
+    <li>照片：儲存於裝置本地應用程式目錄。</li>
+    <li>使用者偏好設定：儲存於裝置本地 SharedPreferences。</li>
+  </ul>
+  <p>部分雲端功能（AI 智慧記帳、點數與訂閱）會傳輸特定資料，詳見第 3、4 節。</p>
+
+  <h2>3. AI 智慧功能與資料傳輸</h2>
+  <p>當您<strong>主動使用</strong> AI 功能（拍照記帳、文字記帳、語音記帳、文字翻譯、拍照翻譯、旅遊助手）時，相關資料會透過我們的伺服器（Google Cloud Functions）傳送至 <strong>Google Gemini</strong> 進行處理，並將結果回傳給您：</p>
+  <ul>
+    <li>拍照記帳 / 拍照翻譯：您選取的收據或菜單<strong>照片</strong>。</li>
+    <li>文字記帳 / 文字翻譯 / 旅遊助手：您輸入的<strong>文字內容</strong>。</li>
+    <li>語音記帳：語音<strong>在您的裝置本地</strong>轉換為文字，僅上傳<strong>轉換後的文字</strong>；原始音訊不會離開您的裝置。</li>
+  </ul>
+  <p>這些資料<strong>僅用於即時提供該次功能結果</strong>，處理完成後即予丟棄，<strong>不會長期儲存</strong>。若您不使用上述 AI 功能，則不會有任何此類資料被傳送。</p>
+
+  <h2>4. 帳號、點數與訂閱資料</h2>
+  <p>為提供點數與訂閱功能，旅費通使用 Firebase 服務：</p>
+  <ul>
+    <li><strong>匿名登入</strong>：以 Firebase 匿名驗證產生一組<strong>匿名識別碼（UID）</strong>，不包含您的姓名、電子郵件或電話。</li>
+    <li><strong>帳務資料（Firestore）</strong>：僅儲存與該匿名 UID 關聯的點數餘額、訂閱狀態、簽到與兌換紀錄，用於防止重複領取與同步配額。您的旅程、交易與照片<strong>不會</strong>存放於此。</li>
+  </ul>
+
+  <h2>5. 其他第三方服務</h2>
+  <ul>
+    <li><strong>匯率 API</strong>：取得即時匯率時發送幣別查詢，不包含個人資訊。</li>
+    <li><strong>GPS 定位服務</strong>：僅在您主動使用時存取，用於記錄消費地點，資料僅儲存於本地。</li>
+    <li><strong>RevenueCat</strong>：處理應用程式內訂閱與購買，可能收集匿名的購買統計資料。</li>
+    <li><strong>Google AdMob</strong>：顯示廣告時，Google 可能收集裝置識別碼及廣告互動資料。</li>
+  </ul>
+
+  <h2>6. 權限使用</h2>
+  <ul>
+    <li><strong>相機與相簿</strong>：用於拍攝或選取交易相關照片、AI 拍照記帳與拍照翻譯。</li>
+    <li><strong>麥克風</strong>：用於語音記帳（語音於本地轉文字）。</li>
+    <li><strong>位置</strong>：用於自動記錄消費地點（可選功能）。</li>
+    <li><strong>通知</strong>：用於記帳提醒與旅程通知（可在設定中關閉）。</li>
+  </ul>
+
+  <h2>7. 資料匯出與分享</h2>
+  <p>您可透過應用程式內的匯出功能將資料匯出為 JSON 或 PDF。匯出的檔案由您自行管理，我們不會存取或儲存這些檔案。</p>
+
+  <h2>8. 兒童隱私</h2>
+  <p>旅費通不針對 13 歲以下兒童設計，我們不會故意收集兒童的個人資訊。</p>
+
+  <h2>9. 隱私政策變更</h2>
+  <p>我們可能不定期更新本政策。重大變更時，我們會在應用程式內通知您。</p>
+
+  <h2>10. 聯絡我們</h2>
+  <p>如有任何隱私相關問題，請聯繫：<a href="mailto:idteasonchen@gmail.com">idteasonchen@gmail.com</a></p>
+</div>
+
+<div id="en" class="lang-content active">
+  <h1>🦉 TravelBudget Privacy Policy</h1>
+  <p class="date">Last Updated: October 11, 2026</p>
+
+  <h2>1. Overview</h2>
+  <p>TravelBudget is a travel expense tracking app. We value your privacy, and this policy explains how we collect, use, and protect your information.</p>
+
+  <h2>2. Data Storage Principle (Offline-First)</h2>
+  <p>TravelBudget uses an <strong>Offline-First</strong> design. Your core bookkeeping data is stored locally on your device and is NOT uploaded to any server:</p>
+  <ul>
+    <li>Trips, transactions, companions, and wallets: stored only in the local SQLite database on your device.</li>
+    <li>Photos: stored in the app's local directory on your device.</li>
+    <li>Preferences: stored locally via SharedPreferences.</li>
+  </ul>
+  <p>Certain cloud features (AI smart bookkeeping, points, and subscriptions) transmit specific data; see Sections 3 and 4.</p>
+
+  <h2>3. AI Features and Data Transmission</h2>
+  <p>When you <strong>actively use</strong> an AI feature (photo bookkeeping, text bookkeeping, voice bookkeeping, text translation, photo translation, travel assistant), the relevant data is sent through our server (Google Cloud Functions) to <strong>Google Gemini</strong> for processing, and the result is returned to you:</p>
+  <ul>
+    <li>Photo bookkeeping / photo translation: the receipt or menu <strong>photo</strong> you select.</li>
+    <li>Text bookkeeping / text translation / travel assistant: the <strong>text</strong> you enter.</li>
+    <li>Voice bookkeeping: speech is converted to text <strong>locally on your device</strong>; only the <strong>resulting text</strong> is uploaded. The raw audio never leaves your device.</li>
+  </ul>
+  <p>This data is used <strong>solely to provide that single feature result in real time</strong>, and is discarded after processing. It is <strong>not retained long-term</strong>. If you do not use these AI features, no such data is transmitted.</p>
+
+  <h2>4. Account, Points, and Subscription Data</h2>
+  <p>To provide points and subscription features, TravelBudget uses Firebase:</p>
+  <ul>
+    <li><strong>Anonymous sign-in</strong>: Firebase Anonymous Authentication generates an <strong>anonymous identifier (UID)</strong> that does not include your name, email, or phone number.</li>
+    <li><strong>Account data (Firestore)</strong>: only the point balance, subscription status, and check-in / redemption records associated with that anonymous UID are stored, to prevent duplicate claims and sync quotas. Your trips, transactions, and photos are <strong>not</strong> stored here.</li>
+  </ul>
+
+  <h2>5. Other Third-party Services</h2>
+  <ul>
+    <li><strong>Exchange Rate API</strong>: sends currency queries to fetch live rates; contains no personal information.</li>
+    <li><strong>GPS Location Services</strong>: accessed only when you actively use it, to record spending locations; data is stored locally only.</li>
+    <li><strong>RevenueCat</strong>: handles in-app subscriptions and purchases; may collect anonymous purchase statistics.</li>
+    <li><strong>Google AdMob</strong>: when showing ads, Google may collect device identifiers and ad interaction data.</li>
+  </ul>
+
+  <h2>6. Permissions</h2>
+  <ul>
+    <li><strong>Camera & Photos</strong>: to capture or select transaction photos, AI photo bookkeeping, and photo translation.</li>
+    <li><strong>Microphone</strong>: for voice bookkeeping (speech is converted to text locally).</li>
+    <li><strong>Location</strong>: to automatically record spending locations (optional).</li>
+    <li><strong>Notifications</strong>: for bookkeeping reminders and trip notifications (can be turned off in settings).</li>
+  </ul>
+
+  <h2>7. Data Export & Sharing</h2>
+  <p>You can export your data as JSON or PDF via the in-app export feature. Exported files are managed by you; we do not access or store them.</p>
+
+  <h2>8. Children's Privacy</h2>
+  <p>TravelBudget is not designed for children under 13, and we do not knowingly collect personal information from children.</p>
+
+  <h2>9. Changes to This Policy</h2>
+  <p>We may update this policy from time to time. For significant changes, we will notify you within the app.</p>
+
+  <h2>10. Contact Us</h2>
+  <p>For any privacy-related questions, please contact: <a href="mailto:idteasonchen@gmail.com">idteasonchen@gmail.com</a></p>
+</div>
+
+<div id="jp" class="lang-content">
+  <h1>🦉 TravelBudget プライバシーポリシー</h1>
+  <p class="date">最終更新日：2026年10月11日</p>
+
+  <h2>1. 概要</h2>
+  <p>TravelBudgetは旅行家計簿アプリです。お客様のプライバシーを重視し、情報の収集・利用・保護の方法について説明します。</p>
+
+  <h2>2. データ保存の原則（オフライン優先）</h2>
+  <p>TravelBudgetは<strong>オフライン優先</strong>設計を採用しています。中核となる記帳データはすべてデバイス内に保存され、サーバーにはアップロードされません。</p>
+  <ul>
+    <li>旅行・取引・同行者・ウォレットの記録：デバイス内のローカル SQLite データベースにのみ保存。</li>
+    <li>写真：デバイス内のアプリディレクトリに保存。</li>
+    <li>設定：デバイス内の SharedPreferences に保存。</li>
+  </ul>
+  <p>一部のクラウド機能（AIスマート記帳、ポイント、サブスクリプション）では特定のデータを送信します。詳細は第3・4節をご覧ください。</p>
+
+  <h2>3. AI機能とデータ送信</h2>
+  <p>AI機能（写真記帳、テキスト記帳、音声記帳、テキスト翻訳、写真翻訳、旅行アシスタント）を<strong>お客様が自ら利用する</strong>際、関連データは当社のサーバー（Google Cloud Functions）を経由して <strong>Google Gemini</strong> に送信され、処理結果が返されます。</p>
+  <ul>
+    <li>写真記帳／写真翻訳：お客様が選択したレシートまたはメニューの<strong>写真</strong>。</li>
+    <li>テキスト記帳／テキスト翻訳／旅行アシスタント：お客様が入力した<strong>テキスト</strong>。</li>
+    <li>音声記帳：音声は<strong>デバイス内でテキストに変換</strong>され、<strong>変換後のテキストのみ</strong>を送信します。音声データ自体はデバイスから出ません。</li>
+  </ul>
+  <p>これらのデータは<strong>その機能の結果をリアルタイムで提供するためだけ</strong>に使用され、処理完了後に破棄されます。<strong>長期保存は行いません</strong>。上記AI機能を利用しない場合、これらのデータは一切送信されません。</p>
+
+  <h2>4. アカウント・ポイント・サブスクリプションのデータ</h2>
+  <p>ポイントおよびサブスクリプション機能を提供するため、TravelBudgetはFirebaseを使用します。</p>
+  <ul>
+    <li><strong>匿名ログイン</strong>：Firebase匿名認証により<strong>匿名ID（UID）</strong>を生成します。氏名・メール・電話番号は含まれません。</li>
+    <li><strong>アカウントデータ（Firestore）</strong>：当該匿名UIDに紐づくポイント残高、サブスクリプション状態、チェックイン・交換履歴のみを保存し、重複受取の防止と残量の同期に使用します。旅行・取引・写真はここには<strong>保存されません</strong>。</li>
+  </ul>
+
+  <h2>5. その他のサードパーティサービス</h2>
+  <ul>
+    <li><strong>為替レートAPI</strong>：リアルタイムレート取得時に通貨照会を送信します。個人情報は含まれません。</li>
+    <li><strong>GPS位置情報サービス</strong>：お客様が自ら利用する場合のみアクセスし、消費場所の記録に使用します。データはローカルにのみ保存されます。</li>
+    <li><strong>RevenueCat</strong>：アプリ内サブスクリプションと購入を処理し、匿名の購入統計を収集する場合があります。</li>
+    <li><strong>Google AdMob</strong>：広告表示時に、Googleがデバイス識別子や広告操作データを収集する場合があります。</li>
+  </ul>
+
+  <h2>6. 権限の使用</h2>
+  <ul>
+    <li><strong>カメラ・写真</strong>：取引写真の撮影・選択、AI写真記帳、写真翻訳に使用。</li>
+    <li><strong>マイク</strong>：音声記帳に使用（音声はローカルでテキストに変換）。</li>
+    <li><strong>位置情報</strong>：消費場所の自動記録に使用（任意機能）。</li>
+    <li><strong>通知</strong>：記帳リマインダーや旅行通知に使用（設定でオフ可能）。</li>
+  </ul>
+
+  <h2>7. データのエクスポートと共有</h2>
+  <p>アプリ内のエクスポート機能でデータをJSONまたはPDF形式で書き出せます。書き出したファイルはお客様が管理し、当社はアクセスも保存もしません。</p>
+
+  <h2>8. 子どものプライバシー</h2>
+  <p>TravelBudgetは13歳未満の子ども向けに設計されておらず、子どもの個人情報を故意に収集することはありません。</p>
+
+  <h2>9. ポリシーの変更</h2>
+  <p>本ポリシーは随時更新する場合があります。重要な変更時にはアプリ内でお知らせします。</p>
+
+  <h2>10. お問い合わせ</h2>
+  <p>プライバシーに関するお問い合わせは：<a href="mailto:idteasonchen@gmail.com">idteasonchen@gmail.com</a></p>
+</div>
+
+<script>
+  function switchLang(lang) {
+    // 切換內容顯示
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+
+    // 切換按鈕狀態
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+
+    // 修改網頁語系屬性
+    document.documentElement.lang = (lang === 'zh' ? 'zh-TW' : lang === 'en' ? 'en' : 'ja');
+  }
+</script>
+
+</body>
+</html>
